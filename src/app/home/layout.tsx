@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { generateMetadata as baseGenerateMetadata } from '@/shared/util/generateMetadata';
 
 export async function generateMetadata(): Promise<Metadata> {
