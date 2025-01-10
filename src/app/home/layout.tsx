@@ -1,7 +1,5 @@
-import type { Metadata } from 'next';
-import { fontVariable } from '@/shared/util/fonts';
+import { Metadata } from 'next';
 import { generateMetadata as baseGenerateMetadata } from '@/shared/util/generateMetadata';
-import './globals.css';
 
 export async function generateMetadata(): Promise<Metadata> {
   return baseGenerateMetadata({
@@ -12,14 +10,10 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${fontVariable} antialiased`}>{children}</body>
-    </html>
-  );
+  return <main>{children}</main>;
 }
