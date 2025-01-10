@@ -1,12 +1,14 @@
 'use client';
 
 import Header from '@/shared/components/header';
+import ParallaxBanner from '../components/parallax-banner';
 
 const HomeContainer = () => {
   return (
     <>
       <Header />
-      <section className="h-[200dvh] w-full">Home Container</section>
+      <ParallaxBanner />
+      <section className="h-[400dvh]" />
     </>
   );
 };
