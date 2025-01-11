@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { generateMetadata as baseGenerateMetadata } from '@/shared/util/generateMetadata';
+import { Suspense } from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   return baseGenerateMetadata({
@@ -15,5 +16,9 @@ export default function HomeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>{children}</main>;
+  return (
+    <Suspense>
+      <main>{children}</main>
+    </Suspense>
+  );
 }

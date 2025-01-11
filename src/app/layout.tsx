@@ -1,4 +1,7 @@
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import type { Metadata } from 'next';
+import { ConfigProvider } from 'antd';
+import ClientLayout from '@/shared/components/client-layout';
 import { fontVariable } from '@/shared/util/fonts';
 import { generateMetadata as baseGenerateMetadata } from '@/shared/util/generateMetadata';
 import './globals.css';
@@ -19,7 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontVariable} antialiased`}>{children}</body>
+      <body className={`${fontVariable} antialiased`}>
+        <AntdRegistry>
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: '#F96500',
+              },
+            }}
+          >
+            <ClientLayout>{children}</ClientLayout>
+          </ConfigProvider>
+        </AntdRegistry>
+      </body>
     </html>
   );
 }

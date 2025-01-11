@@ -37,7 +37,7 @@ const Header = () => {
       className={cn(
         'fixed left-0 top-0 z-50 w-full transition-all duration-500',
         isVisible ? 'translate-y-0' : '-translate-y-full',
-        isScrolled ? 'bg-[#E15F26]/70 backdrop-blur-lg' : 'bg-[#E15F26]'
+        isScrolled ? 'bg-[#E15F26]/70 backdrop-blur-lg' : 'bg-suit-primary'
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">

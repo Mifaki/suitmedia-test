@@ -11,6 +11,9 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        suit: {
+          primary: '#F96500',
+        },
       },
       fontFamily: {
         header: ['var(--font-plus-jakarta)', 'Helvetica Neue', 'Arial', 'sans-serif'],

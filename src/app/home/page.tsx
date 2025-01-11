@@ -1,5 +1,5 @@
 import HomeContainer from './container';
 
-export default function Home() {
+export default async function Home() {
   return <HomeContainer />;
 }

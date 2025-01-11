@@ -21,12 +21,12 @@ const ParallaxBanner = () => {
       });
 
       tl.to(backgroundRef.current, {
-        yPercent: 5,
+        yPercent: 20,
         ease: 'none',
       }).to(
         textRef.current,
         {
-          yPercent: -5,
+          yPercent: -20,
           ease: 'none',
         },
         '<'
@@ -52,7 +52,7 @@ const ParallaxBanner = () => {
 
       <div
         ref={textRef}
-        className="relative z-10 space-y-4 text-center text-white"
+        className="relative z-10 space-y-4 text-center font-header text-white"
       >
         <h1 className="text-4xl">Ideas</h1>
         <h2 className="text-xl">Where all our great things begin</h2>
