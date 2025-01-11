@@ -18,7 +18,7 @@ const MobileDesktop = ({ items, isOpen, setIsOpen }: IMobileHeader) => {
       title={
         <div className="flex items-center justify-between">
           <Image
-            src={'/img/suitmedia-logo.png'}
+            src={'/img/suitmedia-logo-orange.png'}
             alt="Suitmedia Logo"
             width={160}
             height={80}
@@ -26,7 +26,7 @@ const MobileDesktop = ({ items, isOpen, setIsOpen }: IMobileHeader) => {
           <Button
             onClick={() => setIsOpen(false)}
             type="text"
-            icon={<CloseOutlined className="!text-white" />}
+            icon={<CloseOutlined />}
             size="large"
           />
         </div>
