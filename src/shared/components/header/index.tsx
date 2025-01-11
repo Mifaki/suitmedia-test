@@ -63,8 +63,8 @@ const Header = () => {
         <div className="flex items-center md:hidden">
           <Button
             icon={<MenuOutlined />}
-            type="primary"
-            className="text-white"
+            type="text"
+            className="!text-white"
             onClick={() => setIsDrawerOpen(true)}
           />
         </div>

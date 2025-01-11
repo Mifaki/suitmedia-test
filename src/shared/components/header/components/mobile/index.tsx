@@ -25,8 +25,8 @@ const MobileDesktop = ({ items, isOpen, setIsOpen }: IMobileHeader) => {
           />
           <Button
             onClick={() => setIsOpen(false)}
-            type="primary"
-            icon={<CloseOutlined />}
+            type="text"
+            icon={<CloseOutlined className="!text-white" />}
             size="large"
           />
         </div>

@@ -1,8 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Suitmedia Test
+
+This repository contains my submission for the Suitmedia Frontend Intern Test. It is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+---
+
+## Deployment
+
+This project has been deployed and is accessible at:
+
+[suitmedia-test.ahmad-faiz.my.id](https://suitmedia-test.ahmad-faiz.my.id)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org) (version 18 or later recommended)
+- [Bun](https://bun.sh/) (optional, if you prefer to use Bun as the package manager)
+
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Mifaki/suitmedia-test.git
+   cd suitmedia-test
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+### Set Up Environment Variables
+
+Create a `.env.local` file in the root directory with the following content:
+
+```env
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+BASE_API_URL=https://suitmedia-backend.suitdev.com/api
+```
+
+### Run the Development Server
+
+Start the development server with the following command:
 
 ```bash
 npm run dev
@@ -14,23 +67,42 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Libraries Used
 
-## Learn More
+Below is a table listing all libraries and their versions used in this project:
 
-To learn more about Next.js, take a look at the following resources:
+| Library                               | Version |
+| ------------------------------------- | ------- |
+| @ant-design/icons                     | 5.5.2   |
+| @ant-design/nextjs-registry           | 1.0.2   |
+| @tanstack/react-query                 | 5.63.0  |
+| @uidotdev/usehooks                    | 2.4.1   |
+| antd                                  | 5.23.0  |
+| gsap                                  | 3.12.5  |
+| next                                  | 15.1.4  |
+| react                                 | 19.0.0  |
+| react-dom                             | 19.0.0  |
+| clsx                                  | 2.1.1   |
+| tailwindcss                           | 3.4.1   |
+| husky                                 | 9.1.6   |
+| lint-staged                           | 15.2.10 |
+| prettier                              | 3.3.3   |
+| prettier-plugin-tailwindcss           | 0.6.8   |
+| eslint                                | 9.0.0   |
+| eslint-config-next                    | 15.1.0  |
+| eslint-config-prettier                | 9.1.0   |
+| eslint-plugin-import                  | 2.31.0  |
+| eslint-plugin-prettier                | 5.2.1   |
+| eslint-plugin-unused-imports          | 4.1.4   |
+| @commitlint/cli                       | 19.5.0  |
+| @commitlint/config-conventional       | 19.5.0  |
+| @trivago/prettier-plugin-sort-imports | 5.2.0   |
+| typescript                            | 5.0.0   |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## UI Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Homepage Screenshot](https://84y8dhtha6.ufs.sh/f/a76Xht1N2JVk6EgiDxliu7IjLhfSG0M9BdD3RytNxUaXlJ2g)

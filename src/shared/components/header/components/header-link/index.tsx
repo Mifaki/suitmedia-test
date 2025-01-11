@@ -16,7 +16,7 @@ const HeaderLink = ({ href, label, className }: IHeaderLink) => {
     <Link
       href={href}
       className={cn(
-        'block w-full rounded-md px-3 py-2 text-xl text-white transition-colors duration-200 md:w-fit md:text-base',
+        'block w-full rounded-md px-3 py-2 text-xl text-white transition-colors duration-200 hover:!text-white md:w-fit md:text-base',
         'hover:bg-white/10',
         isActive && 'bg-white/20 font-medium',
         className
