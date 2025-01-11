@@ -1,14 +1,14 @@
 import type { TGeneralFilter } from '../models/generalinterfaces';
 
-export const formatFilter = (filters: TGeneralFilter): Record<string, string> => {
+export const formatFilter = (query: TGeneralFilter): Record<string, string> => {
   const queryParams: Record<string, string> = {
-    'page[number]': String(filters.page),
-    'page[size]': String(filters.pageSize),
-    sort: filters.sort ?? '-published_at',
+    'page[number]': String(Math.max(1, query.page ?? 1)),
+    'page[size]': String(Math.max(1, query.pageSize ?? 10)),
+    sort: query.sort ?? '-published_at',
   };
 
-  if (filters.append?.length) {
-    queryParams.append = filters.append.join(',');
+  if (query.append?.length) {
+    queryParams.append = query.append.join(',');
   }
 
   return queryParams;

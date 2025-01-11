@@ -9,7 +9,7 @@ export async function getAllIdea(
   params?: Record<string, any>
 ): Promise<IAllIdeaResponseRoot | any> {
   try {
-    console.log(`${baseURL}/ideas?${new URLSearchParams(params).toString()}`);
+    console.log(`${baseURL}/idea?${new URLSearchParams(params).toString()}`);
     const response = await fetch(`${baseURL}/ideas?${new URLSearchParams(params).toString()}`, {
       method: 'GET',
       headers: {

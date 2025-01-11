@@ -1,6 +1,6 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { generateMetadata as baseGenerateMetadata } from '@/shared/util/generateMetadata';
-import { Suspense } from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   return baseGenerateMetadata({
