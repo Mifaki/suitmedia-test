@@ -13,15 +13,15 @@ const FilterForm = ({ form, onValuesChange, query }: IFilterForm) => {
     <Form
       form={form}
       layout="horizontal"
-      className="grid w-1/2 grid-cols-2 gap-8"
+      className="grid w-full grid-cols-1 gap-1 md:w-1/2 md:grid-cols-2 md:gap-8"
       onValuesChange={onValuesChange}
       initialValues={{
-        pageSize: query.pageSize,
+        pageSize: Math.max(10, query.pageSize ?? 10),
         sort: query.sort,
       }}
     >
       <Form.Item
-        className="w-full"
+        className="!my-0 w-full"
         name={'pageSize'}
         label="Show per page:"
       >
@@ -35,7 +35,7 @@ const FilterForm = ({ form, onValuesChange, query }: IFilterForm) => {
         />
       </Form.Item>
       <Form.Item
-        className="w-full"
+        className="!my-0 w-full"
         name={'sort'}
         label="Show By:"
       >

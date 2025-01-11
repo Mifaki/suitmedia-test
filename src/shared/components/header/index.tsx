@@ -1,14 +1,19 @@
+import { MenuOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from 'antd';
 import { cn } from '@/shared/util/cn';
+import DesktopHeader from './components/desktop';
 import HeaderLink from './components/header-link';
+import MobileDesktop from './components/mobile';
 import { headerData } from './models/headerData';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -55,13 +60,22 @@ const Header = () => {
           />
         </Link>
 
-        <ul className="flex items-center gap-5 text-white">
-          {headerData.map((dx) => (
-            <li key={dx.href}>
-              <HeaderLink {...dx} />
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center md:hidden">
+          <Button
+            icon={<MenuOutlined />}
+            type="primary"
+            className="text-white"
+            onClick={() => setIsDrawerOpen(true)}
+          />
+        </div>
+
+        <DesktopHeader items={headerData} />
+
+        <MobileDesktop
+          items={headerData}
+          isOpen={isDrawerOpen}
+          setIsOpen={setIsDrawerOpen}
+        />
       </div>
     </nav>
   );

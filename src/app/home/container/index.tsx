@@ -18,7 +18,7 @@ const HomeContainer = () => {
     <>
       <Header />
       <ParallaxBanner />
-      <section className="h-fit px-40 pb-20 pt-8">
+      <section className="h-fit px-10 pb-20 pt-8 md:px-20 xl:px-40">
         <LoadingWrapper isLoading={isLoading}>
           {data && (
             <IIdeaList

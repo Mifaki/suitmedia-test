@@ -12,8 +12,8 @@ interface IIdeaList {
 const IIdeaList = ({ ideas, meta, filterComponent, paginationComponent }: IIdeaList) => {
   return (
     <div>
-      <div className="mb-6 flex items-center justify-between">
-        <p>
+      <div className="mb-10 flex flex-col items-start justify-between md:mb-6 md:flex-row md:items-center">
+        <p className="text-[14px] md:text-base">
           Showing {meta.from} - {meta.to} of {meta.total}
         </p>
         {filterComponent}
